@@ -15,4 +15,4 @@ def best_score(a_dictionary):
             if maxValue < a_dictionary[i]:
                 maxReturn = i
                 maxValue = a_dictionary[i]
-        return maxReturn       
+        return maxReturn
