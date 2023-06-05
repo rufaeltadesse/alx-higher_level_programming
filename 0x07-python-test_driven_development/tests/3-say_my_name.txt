@@ -1,0 +1,70 @@
+# Say my name
+
+=========================
+How to Use Say my name
+=========================
+
+Defines a function ``say_my_name(first_name, last_name="")``.
+
+How to use
+====
+
+``say_my_name(...)`` prints "My name is <first_name> <last_name>".
+
+::
+
+    >>> say_my_name = __import__('3-say_my_name').say_my_name
+    >>> say_my_name("Rufael", "Tadesse")
+    My name is Rufael Tadesse
+
+::
+
+    >>> say_my_name("Rufael Tadesse", "Terfa")
+    My name is Rufael Tadesse Terfa
+
+The parameter ```last_name``` is optional. If no last name is provided,
+an empty string is printed instead.
+
+::
+
+    >>> say_my_name("Rufael")
+    My name is Rufael 
+
+Invalid values
+============
+
+The parameters ``first_name`` and ``last_name``` must be strings. Otherwise,
+a TypeError is raised.
+
+::
+
+    >>> say_my_name(6, "Rufael")
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name("Rufael", ["Tad", "Ter", "Far"])
+    Traceback (most recent call last):
+    TypeError: last_name must be a string
+
+::
+
+    >>> say_my_name({"Rufael": 4, "Tadesse": 3}, 3.7)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+::
+
+    >>> say_my_name(None)
+    Traceback (most recent call last):
+    TypeError: first_name must be a string
+
+At least one name must be given.
+
+::
+
+    >>> say_my_name()
+    Traceback (most recent call last):
+    TypeError: say_my_name() missing 1 required positional argument: 'first_name'
+
