@@ -1,0 +1,95 @@
+The add integer test module
+=================================
+
+Using add_integer
+---------------------
+
+File in text format
+First import add integer from the 0-add_integer module:
+
+    >>> add_integer = __import__('0-add_integer').add_integer
+
+doc string module checking:
+
+    >>> m = __import__("0-add_integer").__doc__
+    >>> len(m) > 1 
+    True
+
+doc string checking :
+
+    >>> f = __import__("0-add_integer").add_integer.__doc__
+    >>> len(f) > 1
+    True
+         
+Usage basic feature:
+
+    >>> add_integer(3, 4)
+    7
+    
+int argument test:
+
+    >>> add_integer(3)
+    101
+
+test argument test and default:
+
+    >>> add_integer(0)
+    98
+
+positive with negative tst:
+
+    >>> add_integer(3, -4)
+    -1
+
+negative with positive test:
+
+    >>> add_integer(-5, 8)
+    3
+
+addition over multiplication:
+
+    >>> [add_integer(i, i ** 2) for i in range(6)]
+    [0, 2, 6, 12, 20, 30]
+
+negative and float test:
+
+    >>> add_integer(105.3, -5)
+    100
+
+Float overflow:
+
+    >>> add_integer(1500.5)
+    1598
+
+Float NaN:
+
+    >>> add_integer(float('NaN'))
+    Traceback (most recent call last):
+    ...
+    ValueError: cannot convert float NaN to integer
+
+String input:
+
+    >>> add_integer(4, "School")
+    Traceback (most recent call last):
+    ...
+    TypeError: b must be an integer
+
+None input:
+
+    >>> add_integer(None)
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
+
+Two negative float input:
+
+    >>> add_integer(-101.5, -10.8)
+    -111
+
+Two string input:
+
+    >>> add_integer("test", "faea")
+    Traceback (most recent call last):
+    ...
+    TypeError: a must be an integer
