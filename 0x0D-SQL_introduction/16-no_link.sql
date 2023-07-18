@@ -1,1 +1,2 @@
-select score,name from second_table where name!='' and name is not null order by score desc
+-- selecting rows
+SELECT score,name FROM second_table WHERE name!='' AND name IS NOT NULL ORDER BY score DESC

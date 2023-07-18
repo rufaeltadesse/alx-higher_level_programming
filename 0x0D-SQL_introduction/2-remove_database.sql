@@ -1,1 +1,2 @@
-Drop Database IF EXISTS hbtn_0c_0;
+-- Dropping db
+DROP Database IF EXISTS hbtn_0c_0;

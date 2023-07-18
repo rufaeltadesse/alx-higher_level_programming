@@ -1,1 +1,2 @@
-select * from first_table;
+-- Displaying rows
+SELECT * FROM first_table;
