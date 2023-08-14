@@ -6,5 +6,4 @@ function factorial (a) {
     return 1;
   }
 }
-const { argv } = require('node:process');
-console.log(factorial(parseInt(argv[2])));
+console.log(factorial(parseInt(process.argv[2])));

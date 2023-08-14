@@ -1,14 +1,13 @@
 #!/usr/bin/node
-const { argv } = require('node:process');
 let second = 0;
 let first = 0;
 let flagCount = 0;
-if (argv.length > 3)
-first = parseInt(argv[2]);
-for (let i = 3; i < argv.length; i++) {
-  if (argv[i] > first) {
+if (process.argv.length > 3)
+first = parseInt(process.argv[2]);
+for (let i = 3; i < process.argv.length; i++) {
+  if (process.argv[i] > first) {
     second = first;
-    first = argv[i];
+    first = process.argv[i];
   }
 }
 console.log(second);
