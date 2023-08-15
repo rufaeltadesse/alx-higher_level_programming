@@ -7,11 +7,11 @@ module.exports = class Rectangle {
     }
   }
 
-  print () {
+  print (c = 'X') {
     for (let i = 0; i < this.height; i++) {
       let va = '';
       for (let j = 0; j < this.width; j++) {
-        va = va + 'X';
+        va = va + c;
       }
       console.log(va);
     }
