@@ -1,4 +1,8 @@
 #!/usr/bin/python3
+"""
+Reading all states
+"""
+
 import MySQLdb
 from sys import argv
 
